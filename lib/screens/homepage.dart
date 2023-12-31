@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:real_estate_app_coding_challenge/widgets/black_round_button.dart';
 import '../widgets/homepage_options.dart';
