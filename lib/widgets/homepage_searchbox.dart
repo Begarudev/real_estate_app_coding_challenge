@@ -9,18 +9,17 @@ class HomePageSearchBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
       decoration: ShapeDecoration(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(40),
-            side: BorderSide(
-                color: Colors.black,
-                width: 2,
+            side: const BorderSide(
+                color: Colors.black12,
                 strokeAlign: 1,
                 style: BorderStyle.solid),
           ),
           color: Colors.transparent),
-      child: TextField(
+      child: const TextField(
         decoration: InputDecoration(
             icon: Icon(Icons.search),
             // label: Text("Search"),

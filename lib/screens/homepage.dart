@@ -1,5 +1,7 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-
+import 'package:real_estate_app_coding_challenge/widgets/black_round_button.dart';
+import '../widgets/homepage_options.dart';
 import '../widgets/homepage_searchbox.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -8,25 +10,27 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 1,
+      length: 5,
       child: Scaffold(
         appBar: AppBar(
-          title: HomePageSearchBox(),
-          actions: [
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
-              width: 48,
-              height: 48,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: Colors.black),
-              ),
-              child: Icon(Icons.),
-            )
-          ],
+          title: const HomePageSearchBox(),
+          actions: const [HomePageOptions()],
           bottom: TabBar(
+            indicator: BoxDecoration(color: Colors.black),
+            labelColor: Colors.black,
+            indicatorColor: Colors.black,
+            labelPadding: EdgeInsets.all(5),
+            indicatorWeight: 1,
+            indicatorPadding: EdgeInsets.all(0),
+            padding: EdgeInsets.all(0),
+            isScrollable: true,
+            dividerColor: Colors.transparent,
             tabs: [
-              Text("Real Estate"),
+              BlackRoundButton(text: "Real Estate", color: Colors.white),
+              BlackRoundButton(text: "Apartment", color: Colors.white),
+              BlackRoundButton(text: "House", color: Colors.white),
+              BlackRoundButton(text: "Motels", color: Colors.white),
+              BlackRoundButton(text: "text", color: Colors.white),
             ],
           ),
         ),
